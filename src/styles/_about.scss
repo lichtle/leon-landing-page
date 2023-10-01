@@ -1,0 +1,52 @@
+@use "variables";
+
+.about {
+  max-width: 45%;
+
+  &__description {
+    padding: 3vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 6px;
+
+    &__text {
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    &__image {
+      max-width: 70%;
+    }
+  }
+
+  &__links {
+    &__link {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 48px;
+
+      &__item {
+        background-color: variables.$mainColor;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 1vw;
+        border-radius: 4px;
+        transition: 0.3s ease;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        &:hover {
+          background-color: darken(variables.$mainColor, 20%);
+        }
+
+        &__text {
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

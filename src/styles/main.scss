@@ -1,0 +1,21 @@
+@use "variables";
+@use "about";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: variables.$textColor;
+}
+
+body {
+  background-image: url(../images/main.jpg);
+
+  .container {
+    max-width: 1440px;
+    margin: 3vw;
+  }
+}
