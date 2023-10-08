@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "gulp": "gulp",
-    "build": "gulp",
-    "dev": "gulp watch",
+    "build": "gulp watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
