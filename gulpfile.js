@@ -14,17 +14,18 @@ function styles() {
 }
 
 function images() {
-  // Comprimindo imagens
   return gulp
-    .src("./src/images/*") // Pegar qualquer arquivo dentro da pasta "images", ou seja, todas as imagens
+    .src("./src/images/*")
     .pipe(imagemin())
-    .pipe(gulp.dest("./dist/images")); // Pasta de destino das imagens comprimidas
+    .pipe(gulp.dest("./dist/images"));
 }
 
-exports.default = gulp.parallel(styles, images);
-exports.watch = function () {
+exports.default = function () {
   gulp.watch(
-    "./src/styles/*.scss", // Arquivos a serem "vigiados" (nesse caso, qualquer arquivo com extensão .scss que esteja dentro da pasta styles, que está dentro da pasta src)
+    "./src/styles/*.scss",
+    { ignoreInitial: false },
     gulp.parallel(styles)
   );
+
+  gulp.watch("./src/images/*", { ignoreInitial: false }, gulp.parallel(images));
 };
