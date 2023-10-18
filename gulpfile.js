@@ -20,12 +20,4 @@ function images() {
     .pipe(gulp.dest("./dist/images"));
 }
 
-exports.default = function () {
-  gulp.watch(
-    "./src/styles/*.scss",
-    { ignoreInitial: false },
-    gulp.parallel(styles)
-  );
-
-  gulp.watch("./src/images/*", { ignoreInitial: false }, gulp.parallel(images));
-};
+exports.default = gulp.series(styles, images);
