@@ -21,3 +21,7 @@ function images() {
 }
 
 exports.default = gulp.series(styles, images);
+
+exports.watch = function () {
+  gulp.watch("./src/styles/*.scss", gulp.series(styles));
+};
